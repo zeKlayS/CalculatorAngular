@@ -1,0 +1,27 @@
+<script src= "angular.min.js"></script>
+<script src= "calculator.js"></script>
+ 
+<div ng-app="CalculatorApp" ng-controller="CalculatorController">
+   <div class="maindisplay">
+      <div class="subdisplay">{{ subText }}</div>
+      {{ mainText }}
+   </div>
+   <div class="container">
+      <div class="item clean" (click)="allClear()">C</div>
+      <div class="item calc" (click)="pressKey('+')">+</div>
+      <div class="item calc" (click)="pressKey('-')">-</div>
+      <div class="item calc" (click)="pressKey('*')">&times;</div>
+      <div class="item calc" (click)="pressKey('/')">&divide;</div>
+      <div class="item" (click)="pressKey('1')">1</div>
+      <div class="item" (click)="pressKey('2')">2</div>
+      <div class="item" (click)="pressKey('3')">3</div>
+      <div class="item" (click)="pressKey('4')">4</div>
+      <div class="item" (click)="pressKey('5')">5</div>
+      <div class="item" (click)="pressKey('6')">6</div>
+      <div class="item" (click)="pressKey('7')">7</div>
+      <div class="item" (click)="pressKey('8')">8</div>
+      <div class="item" (click)="pressKey('9')">9</div>
+      <div class="item equal" (click)="getAnswer()">=</div>
+      <div class="item zero" (click)="pressKey('0')">0</div>
+      <div class="item" (click)="pressKey('.')">.</div>
+   </div>
